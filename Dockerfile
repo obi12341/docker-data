@@ -6,6 +6,7 @@ RUN mkdir /var/run/sshd
 RUN sed -i -e "s/PermitRootLogin without-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
 RUN echo 'root:test' | chpasswd
 RUN mkdir -p /var/log/apache2/
+RUN mkdir -p /var/www/
 RUN chown -R www-data:www-data /var/www/
 
 VOLUME /var/lib/mysql
