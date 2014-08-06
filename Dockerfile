@@ -3,7 +3,7 @@ MAINTAINER Patrick Oberdorf "patrick@oberdorf.net"
 
 RUN apt-get update && apt-get install -y openssh-server
 RUN sed -i -e "s/PermitRootLogin without-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
-RUN echo 'root:test' | chpasswd
+#RUN echo 'root:test' | chpasswd
 
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /var/log/apache2/
