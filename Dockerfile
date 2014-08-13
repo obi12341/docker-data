@@ -15,6 +15,8 @@ RUN chown -R www-data:www-data /var/www/
 
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
+RUN chmod +x /run.sh
+RUN chmod +x /set_root_pw.sh
 
 VOLUME /var/lib/mysql
 VOLUME /var/www/
